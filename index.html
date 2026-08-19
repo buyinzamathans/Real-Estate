@@ -3,127 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Real Estate</title>
-    <style>
-        /* Base Styles */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f8f9fa; color: #333; }
-        
-        /* Navigation */
-        header { background-color: #fff; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .logo { font-size: 24px; font-weight: bold; color: #2c3e50; }
-        nav ul { list-style: none; display: flex; gap: 20px; }
-        nav ul li a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
-        nav ul li a:hover { color: #007bff; }
-
-        /* Hero Section */
-        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff; text-align: center; padding: 20px; }
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; margin-bottom: 30px; }
-        
-        /* Search Bar */
-        .search-bar { display: flex; background: #fff; padding: 10px; border-radius: 5px; width: 100%; max-width: 600px; }
-        .search-bar input { flex: 1; padding: 15px; border: none; outline: none; font-size: 1rem; }
-        .search-bar button { padding: 15px 30px; background-color: #007bff; color: white; border: none; cursor: pointer; font-weight: bold; border-radius: 3px; }
-        .search-bar button:hover { background-color: #0056b3; }
-
-        /* Featured Properties */
-        .listings-container { padding: 60px 20px; max-width: 1200px; margin: auto; }
-        .section-title { text-align: center; font-size: 2rem; margin-bottom: 40px; color: #2c3e50; }
-        
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        
-        .card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: transform 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-content { padding: 20px; }
-        .price { font-size: 1.5rem; color: #007bff; font-weight: bold; margin-bottom: 10px; }
-        .title { font-size: 1.2rem; margin-bottom: 10px; }
-        .location { color: #777; font-size: 0.9rem; margin-bottom: 15px; }
-        .details { display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 15px; font-size: 0.9rem; color: #555; }
-        
-        /* Footer */
-        footer { background: #2c3e50; color: #fff; text-align: center; padding: 20px; margin-top: 40px; }
-    </style>
+    <title>Mathan | Premium Real Estate Agent</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo">EstatePro</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Buy</a></li>
-                <li><a href="#">Rent</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <span><i class="fa-solid fa-envelope"></i> agent@mathanrealestate.com</span>
+            <span><i class="fa-solid fa-phone"></i> +256 700 000 000</span>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <h1>MATHAN <span>ESTATES</span></h1>
+            </a>
+            <nav class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#properties">Listings</a>
+                <a href="#about">About Me</a>
+            </nav>
+            <a href="https://wa.me/256700000000" class="btn-whatsapp-nav" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Let's Chat
+            </a>
+        </div>
     </header>
 
-    <section class="hero">
-        <h1>Find Your Perfect Home</h1>
-        <p>Discover the best properties for sale and rent.</p>
-        <div class="search-bar">
-            <input type="text" placeholder="Search by location (e.g., Kololo, Ntinda)...">
-            <button>Search</button>
+    <!-- Hero Section -->
+    <section id="home" class="hero" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="hero-overlay">
+            <div class="container hero-content">
+                <div class="hero-box">
+                    <h2>Premium 4 Bedroom House For Sale in Seeta</h2>
+                    <p>Sitting on a 50x100ft plot in a secure, serene neighborhood. Perfect for a growing family.</p>
+                    <h3 class="hero-price">200M UShs</h3>
+                    <a href="https://wa.me/256700000000?text=I'm%20interested%20in%20the%204%20Bedroom%20House%20in%20Seeta" class="btn-primary" target="_blank">
+                        Inquire via WhatsApp
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="listings-container">
-        <h2 class="section-title">Featured Properties</h2>
-        <div class="grid">
+    <!-- Why Choose Me Section -->
+    <section id="about" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Work With Me?</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fa-solid fa-magnifying-glass-location"></i>
+                    <h3>Verified Listings</h3>
+                    <p>Every property is personally inspected and verified for clean titles and value.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <h3>Direct Deals</h3>
+                    <p>No complex agency bureaucracy. You deal directly with me for fast, transparent negotiations.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h3>Instant Response</h3>
+                    <p>See a property you like? Hit the WhatsApp button and get a response in minutes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Listings Grid -->
+    <section id="properties" class="listings-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest Available Properties</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="property-grid">
+                <!-- Property Card 1 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="House in Seeta">
+                        <span class="badge sale">For Sale</span>
+                    </div>
+                    <div class="property-details">
+                        <h3>4 Bedroom House in Seeta</h3>
+                        <p class="location"><i class="fa-solid fa-location-dot"></i> Nantabulirwa, Seeta</p>
+                        <p class="description">Spacious family home sitting on a 50x100ft plot. Ready for immediate occupation.</p>
+                        <div class="price-action">
+                            <span class="price">200M UShs</span>
+                            <a href="https://wa.me/256700000000?text=I'm%20interested%20in%20the%20Seeta%20House" class="btn-whatsapp-icon" target="_blank">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 2 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Land in Kira">
+                        <span class="badge hot">Hot Deal</span>
+                    </div>
+                    <div class="property-details">
+                        <h3>50x100ft Plot of Land</h3>
+                        <p class="location"><i class="fa-solid fa-location-dot"></i> Kira Shimon</p>
+                        <p class="description">Prime residential plot in a rapidly developing area. Perfect for building apartments or a home.</p>
+                        <div class="price-action">
+                            <span class="price">65M UShs</span>
+                            <a href="https://wa.me/256700000000?text=I'm%20interested%20in%20the%20Kira%20Land" class="btn-whatsapp-icon" target="_blank">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 3 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="House in Gayaza">
+                        <span class="badge sale">For Sale</span>
+                    </div>
+                    <div class="property-details">
+                        <h3>4 Bedroom House</h3>
+                        <p class="location"><i class="fa-solid fa-location-dot"></i> Manyangwa, Gayaza</p>
+                        <p class="description">Modern bungalow sitting on a massive 100x100ft plot. Quiet and highly secure environment.</p>
+                        <div class="price-action">
+                            <span class="price">200M UShs</span>
+                            <a href="https://wa.me/256700000000?text=I'm%20interested%20in%20the%20Gayaza%20House" class="btn-whatsapp-icon" target="_blank">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 4 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Apartment Kololo">
+                        <span class="badge rent">For Rent</span>
+                    </div>
+                    <div class="property-details">
+                        <h3>3 Bedroom Apartment</h3>
+                        <p class="location"><i class="fa-solid fa-location-dot"></i> Kololo, Kampala</p>
+                        <p class="description">Luxury furnished apartment with a shared swimming pool and gym access.</p>
+                        <div class="price-action">
+                            <span class="price">5.5M UShs / mo</span>
+                            <a href="https://wa.me/256700000000?text=I'm%20interested%20in%20the%20Kololo%20Apartment" class="btn-whatsapp-icon" target="_blank">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <!-- Property Card 1 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="House in Kololo">
-                <div class="card-content">
-                    <div class="price">UShs 1,200,000,000</div>
-                    <h3 class="title">Luxury Family Villa</h3>
-                    <div class="location">📍 Kololo</div>
-                    <div class="details">
-                        <span>🛏️ 4 Beds</span>
-                        <span>🛁 3 Baths</span>
-                        <span>📐 450 sqm</span>
-                    </div>
-                </div>
+            <div class="view-more-container">
+                <a href="https://wa.me/256700000000?text=Hi,%20do%20you%20have%20more%20properties%20available?" class="btn-secondary" target="_blank">
+                    Request More Properties via WhatsApp
+                </a>
             </div>
-
-            <!-- Property Card 2 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Apartment in Naalya">
-                <div class="card-content">
-                    <div class="price">UShs 1,500,000 / month</div>
-                    <h3 class="title">Modern Executive Apartment</h3>
-                    <div class="location">📍 Naalya</div>
-                    <div class="details">
-                        <span>🛏️ 2 Beds</span>
-                        <span>🛁 2 Baths</span>
-                        <span>📐 120 sqm</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Property Card 3 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="House in Muyenga">
-                <div class="card-content">
-                    <div class="price">UShs 850,000,000</div>
-                    <h3 class="title">Cozy Suburban Home</h3>
-                    <div class="location">📍 Muyenga</div>
-                    <div class="details">
-                        <span>🛏️ 3 Beds</span>
-                        <span>🛁 2 Baths</span>
-                        <span>📐 300 sqm</span>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 EstatePro. All Rights Reserved.</p>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2>MATHAN <span>ESTATES</span></h2>
+                <p>Your trusted independent property agent in Uganda. Fast, reliable, and transparent real estate deals.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#properties">Properties For Sale</a></li>
+                    <li><a href="#properties">Properties For Rent</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Get In Touch</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Kampala, Uganda</p>
+                <p><i class="fa-solid fa-phone"></i> +256 700 000 000</p>
+                <p><i class="fa-solid fa-envelope"></i> agent@mathanrealestate.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mathan Estates. All Rights Reserved.</p>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
